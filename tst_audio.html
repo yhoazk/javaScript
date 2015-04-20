@@ -1,0 +1,28 @@
+<html>
+<body style="background-color:black">
+<audio id="myAudio" src="http://afewbitsmore.com/albums/Moby/Moby-Play%2008%20Natural%20Blues.mp3" controls autoplay >
+<source id="mp3_src" src="http://afewbitsmore.com/albums/Moby/Moby-Play%2008%20Natural%20Blues.mp3" type="audio/mp3">
+<!--audio src="http://afewbitsmore.com/albums/Moby/Moby-Play%2007%20Bodyrock.mp3" controls autoplay loop-->
+
+Your browser does not support the <code>audio</code> element.</p>
+</audio>
+
+<script>
+var count = 0;
+var playlist = [
+    "http://afewbitsmore.com/albums/Moby/Moby-Play%2001%20Honey.mp3",
+    "http://afewbitsmore.com/albums/Moby/Moby-Play%2017%20The%20Sky%20Is%20Broken.mp3"
+    ];
+var audio_element = document.getElementById("myAudio");
+audio_element.onended = function(){
+    audio_element.src = playlist[count];
+    alert(playlist[count]);
+    count = count + 1;
+    audio_element.load();
+}
+</script>
+
+
+
+</body>
+</html>
