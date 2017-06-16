@@ -36,3 +36,16 @@ To stop the printing:
 ```js
 clearInterval(d);
 ```
+
+
+## Sin print
+
+```js
+var seno = function(n)
+{
+    s = "#".repeat(1+ 98/2+ 98/4*(Math.sin(((n%360)*3.141560)/180))) +
+    	" ".repeat(70+ 70/4*(Math.sin(((5.5*n%360)*3.141560)/180))) +
+	"#".repeat(1+ 98/2+98/4*(Math.sin(((n%360)*3.141560)/180)));
+    console.log(s);
+}
+```
