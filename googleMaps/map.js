@@ -35,3 +35,31 @@ function initGoogleMap(){
 
 }
 google.maps.event.addDomListener(window, 'load', initGoogleMap);
+
+
+/*
+
+
+Add a info window to each infowindow
+Attach a new property to the object and then call it from the this object
+
+
+for(var i = 0; i < markers.length; i++){
+    name = markers[i].getAttribute("name");
+    address = markers[i].getAttribute("address");
+    point = new google.maps.LatLng(parseFloat(markers[i].getAttribute("lat")), parseFloat(markers[i].getAttribute("lng")));
+    contentString = '<div style="font-family: Lucida Grande, Arial, sans-serif;>'+'<div><b>'+ name +'</b></div>'+'<div>'+ address +'</div>';
+    marker = new google.maps.Marker({
+        map: map,
+        position: point,
+        title: name+" "+address,
+        buborek: contentString
+    });
+    google.maps.event.addListener(marker, 'click', function(){
+        infowindow.setContent(this.buborek);
+        infowindow.open(map,this);
+    });
+    marker.setMap(map);
+}
+
+*/
