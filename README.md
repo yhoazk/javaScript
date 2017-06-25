@@ -59,15 +59,15 @@ It echoes the data used in your request for any of these types:
 * http://httpbin.org/ip 
 	- Returns Origin IP.
 * http://httpbin.org/user-agent 
-	Returns user-agent.
+	- Returns user-agent.
 * http://httpbin.org/headers 
-	Returns header dict.
+	- Returns header dict.
 * http://httpbin.org/get
-	Returns GET data.
+	- Returns GET data.
 * http://httpbin.org/post 
-	Returns POST data.
+	- Returns POST data.
 * http://httpbin.org/put 
-	Returns PUT data.
+	- Returns PUT data.
 * http://httpbin.org/delete Returns DELETE data
 * http://httpbin.org/gzip Returns gzip-encoded data.
 * http://httpbin.org/status/:code Returns given HTTP Status code.
@@ -80,7 +80,11 @@ It echoes the data used in your request for any of these types:
 * http://httpbin.org/hidden-basic-auth/:user/:passwd 404'd BasicAuth.
 * http://httpbin.org/digest-auth/:qop/:user/:passwd Challenges HTTP Digest Auth.
 * http://httpbin.org/stream/:n Streams n–100 lines.
+* http://httpbin.org/delay/:n Delays responding for n–10 seconds.
 
 
+### Test http calls with curl:
 
-http://httpbin.org/delay/:n Delays responding for n–10 seconds.
+```
+curl -X POST -H "Content-Type: application/json" -d '{"name":"Test","lastName":"Tester","gender":"F","email":"tset@test.test","telephone":"12345678","municipality":"639","allowsContact":"0","allowData":false}' "http://httpbin.org/post"
+```
