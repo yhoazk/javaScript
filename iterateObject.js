@@ -8,3 +8,14 @@ for(vat t of towns)
 {
   console.log(t);
 }
+
+
+/* Obtener el nombre de un municipio por su id */
+
+var r = towns.filter(function(obj)	{
+	if(obj.idMunicipio == '541'){
+     return obj.MunicipioNombre;
+    }
+});
+
+console.log(r);
