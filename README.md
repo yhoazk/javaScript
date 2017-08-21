@@ -88,3 +88,17 @@ It echoes the data used in your request for any of these types:
 ```
 curl -X POST -H "Content-Type: application/json" -d '{"name":"Test","lastName":"Tester","gender":"F","email":"tset@test.test","telephone":"12345678","municipality":"639","allowsContact":"0","allowData":false}' "http://httpbin.org/post"
 ```
+
+
+### Expand a javascript array:
+[src](https://stackoverflow.com/questions/1374126/how-to-extend-an-existing-javascript-array-with-another-array-without-creating)
+```
+var a = [1, 2, 3];
+a = a.concat([5, 4, 3]);
+```
+
+Also:
+
+```
+a.push.apply(a, [5, 4, 3])
+```
